@@ -85,7 +85,6 @@ public class DoorModule2 extends AppCompatActivity implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        //finish();
 
         //get globalValue to check status
         final GlobalValue globalValue = (GlobalValue) getApplicationContext();
@@ -107,14 +106,7 @@ public class DoorModule2 extends AppCompatActivity implements View.OnClickListen
                         // current activity
                         DoorModule2.this.finish();
                     }
-                })
-               /* .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // if this button is clicked, just close
-                        // the dialog box and do nothing
-                        dialog.cancel();
-                    }
-                })*/;
+                });
 
         // create alert dialog
         AlertDialog alertDialog = alertDialogBuilder.create();

@@ -67,7 +67,6 @@ public class StoveModule extends AppCompatActivity implements View.OnClickListen
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -96,14 +95,7 @@ public class StoveModule extends AppCompatActivity implements View.OnClickListen
                         // current activity
                         StoveModule.this.finish();
                     }
-                })
-               /* .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // if this button is clicked, just close
-                        // the dialog box and do nothing
-                        dialog.cancel();
-                    }
-                })*/;
+                });
 
         // create alert dialog
         AlertDialog alertDialog = alertDialogBuilder.create();

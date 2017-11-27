@@ -38,6 +38,5 @@ public class temperatureSensor extends Activity implements View.OnClickListener{
         setResult(RESULT_OK, i);
 
         finish();
-
     }
 }

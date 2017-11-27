@@ -43,11 +43,6 @@ public class MainControl extends AppCompatActivity implements View.OnClickListen
         btn_LightingModule.setOnClickListener(this);
         btn_ClothHorseModule.setOnClickListener(this);
         btn_DishWasherModule.setOnClickListener(this);
-
-//        //testing purpose
-//        final GlobalValue globalValue = (GlobalValue) getApplicationContext();
-//        btn_DishWasherModule.setText("door="+globalValue.getDoorBool() + ";smoke=" + globalValue.getSmokeBool()+";gas="+globalValue.getGasBool()+";temp="+globalValue.getTempBool()+";hum="+globalValue.getHumBool());
-
     }
 
     @Override
@@ -94,7 +89,6 @@ public class MainControl extends AppCompatActivity implements View.OnClickListen
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }

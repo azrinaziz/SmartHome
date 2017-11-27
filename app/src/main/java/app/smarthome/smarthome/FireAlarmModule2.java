@@ -67,7 +67,6 @@ public class FireAlarmModule2 extends AppCompatActivity implements View.OnClickL
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -77,7 +76,6 @@ public class FireAlarmModule2 extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View v) {
-        //finish();
         //get globalValue to check status
         final GlobalValue globalValue = (GlobalValue) getApplicationContext();
         globalValue.setSmokeBool("0");
@@ -97,14 +95,7 @@ public class FireAlarmModule2 extends AppCompatActivity implements View.OnClickL
                         // current activity
                         FireAlarmModule2.this.finish();
                     }
-                })
-               /* .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // if this button is clicked, just close
-                        // the dialog box and do nothing
-                        dialog.cancel();
-                    }
-                })*/;
+                });
 
         // create alert dialog
         AlertDialog alertDialog = alertDialogBuilder.create();

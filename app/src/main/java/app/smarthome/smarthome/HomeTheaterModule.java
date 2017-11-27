@@ -46,7 +46,6 @@ public class HomeTheaterModule extends AppCompatActivity implements View.OnClick
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -76,14 +75,7 @@ public class HomeTheaterModule extends AppCompatActivity implements View.OnClick
                         // current activity
                         HomeTheaterModule.this.finish();
                     }
-                })
-               /* .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // if this button is clicked, just close
-                        // the dialog box and do nothing
-                        dialog.cancel();
-                    }
-                })*/;
+                });
 
         // create alert dialog
         AlertDialog alertDialog = alertDialogBuilder.create();

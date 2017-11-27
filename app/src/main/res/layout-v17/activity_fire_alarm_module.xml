@@ -7,7 +7,7 @@
     android:paddingBottom="0dp"
     tools:context="app.smarthome.smarthome.FireAlarmModule">
 
-    TextView android:text="Fire Alarm" android:layout_width="wrap_content"
+    <TextView android:text="Fire Alarm" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/TxtFireAlarm"
         android:layout_alignParentTop="true"

@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -94,46 +93,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             smokeBool = basket.getString("smokeKey");
             humBool = basket.getString("humKey");
             btn_ControlModule.setText(doorBool + "/" + tempBool + "/"+ gasBool + "/" + smokeBool + "/" + humBool);
-
-//            final GlobalValue globalValue = (GlobalValue) getApplicationContext();
-//
-//            globalValue.setDoorBool(doorBool);
-//            globalValue.setTempBool(tempBool);
-//            globalValue.setGasBool(gasBool);
-//            globalValue.setSmokeBool(smokeBool);
-//            globalValue.setHumBool(humBool);
-
         }
     }
-
-//    @Override
-//    public void onClick(View v) {
-//        switch (v.getId()){
-//            case R.id.btnDoor:
-//                startActivity(new Intent(MainActivity.this, DoorModule.class));
-//                break;
-//            case R.id.btnFireAlarm:
-//                startActivity(new Intent(MainActivity.this, FireAlarmModule.class));
-//                break;
-//            case R.id.btnAlarm:
-//                startActivity(new Intent(MainActivity.this, AlarmClockModule.class));
-//                break;
-//            case R.id.btnHomeTheater:
-//                startActivity(new Intent(MainActivity.this, HomeTheaterModule.class));
-//                break;
-//            case R.id.btnStove:
-//                startActivity(new Intent(MainActivity.this, StoveModule.class));
-//                break;
-//            case R.id.btnLighting:
-//                startActivity(new Intent(MainActivity.this, LightingModule.class));
-//                break;
-//            case R.id.btnClothHorse:
-//                startActivity(new Intent(MainActivity.this, ClothHorseModule.class));
-//                break;
-//            case R.id.btnDishWasher:
-//                startActivity(new Intent(MainActivity.this, DishWasherModule.class));
-//                break;
-//        }
-//    }
-
 }

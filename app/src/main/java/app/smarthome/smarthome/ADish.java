@@ -20,18 +20,6 @@ public class ADish extends AppCompatActivity {
 
         Status = findViewById(R.id.txtAsmoke);
         Status2 = findViewById(R.id.imgAsmoke);
-//
-//        final GlobalValue globalValue = (GlobalValue) getApplicationContext();
-//        Bool = globalValue.getSmokeBool();
-//
-//        if (Bool.equals("0")) //closed
-//        {
-//            Status2.setImageResource(R.drawable.firealarmoff);
-//            Status.setText("Fire Alarm : Sleep");
-//        }else if (Bool.equals("1")){
-//            Status2.setImageResource(R.drawable.firealarmon);
-//            Status.setText("Fire Alarm : Activated");
-//        }
     }
 
     @Override
@@ -48,7 +36,6 @@ public class ADish extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }

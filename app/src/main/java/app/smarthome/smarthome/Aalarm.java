@@ -13,7 +13,6 @@ public class Aalarm extends AppCompatActivity {
     ImageView Status2;
     String Bool;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,16 +24,6 @@ public class Aalarm extends AppCompatActivity {
         final GlobalValue globalValue = (GlobalValue) getApplicationContext();
         Bool = globalValue.getAlarmValue();
         Status.setText("Alarm set at: " + Bool);
-
-        //To be modify
-//        if (Bool.equals("0")) //closed
-//        {
-//            Status2.setImageResource(R.drawable.firealarmoff);
-//            Status.setText("Fire Alarm : Sleep");
-//        }else if (Bool.equals("1")){
-//            Status2.setImageResource(R.drawable.firealarmon);
-//            Status.setText("Fire Alarm : Activated");
-//        }
     }
 
     @Override
@@ -51,7 +40,6 @@ public class Aalarm extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
