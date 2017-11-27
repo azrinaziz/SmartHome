@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context="app.smarthome.smarthome.ClothHorse">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="183sp"
+        android:id="@+id/imageView12"
+        android:src="@drawable/clothhorse"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Weather is fine."
+        android:id="@+id/txtClothHorseTitle"
+        android:textSize="25sp"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/imageView12"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Cloth Horse Status"
+        android:id="@+id/textView23"
+        android:textSize="22dp"
+        android:width="500sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="#ebebe0"
+        android:height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/txtClothHorseTitle"
+        android:layout_alignLeft="@+id/das"
+        android:layout_alignStart="@+id/das" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Humidity Level :"
+        android:id="@+id/das"
+        android:textSize="13dp"
+        android:gravity="center"
+        android:layout_alignTop="@+id/imageView14"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/imageView14"
+        android:layout_alignLeft="@+id/txtHumLevel"
+        android:layout_alignStart="@+id/txtHumLevel" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/imageView14"
+        android:src="@drawable/borderline2"
+        android:layout_below="@+id/textView23"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Temperature :"
+        android:id="@+id/asdasda"
+        android:textSize="13dp"
+        android:gravity="center"
+        android:layout_alignTop="@+id/das"
+        android:layout_alignRight="@+id/textView23"
+        android:layout_alignEnd="@+id/textView23"
+        android:layout_alignLeft="@+id/imageView14"
+        android:layout_alignStart="@+id/imageView14" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Low"
+        android:id="@+id/txtHum"
+        android:gravity="center"
+        android:layout_below="@+id/txtHumLevel"
+        android:layout_toLeftOf="@+id/imageView14"
+        android:layout_alignLeft="@+id/txtHumLevel"
+        android:layout_alignStart="@+id/txtHumLevel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Average"
+        android:id="@+id/txtTemp"
+        android:gravity="center"
+        android:layout_below="@+id/txtHumLevel"
+        android:layout_alignRight="@+id/asdasda"
+        android:layout_alignEnd="@+id/asdasda"
+        android:layout_toRightOf="@+id/txtHum"
+        android:layout_toEndOf="@+id/txtHum" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="35%rH"
+        android:id="@+id/txtHumLevel"
+        android:textSize="40dp"
+        android:gravity="center"
+        android:layout_below="@+id/das"
+        android:layout_toLeftOf="@+id/imageView14"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turn On Rain Protection"
+        android:id="@+id/btnClothHorse"
+        android:layout_below="@+id/imageView14"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="31°C"
+        android:id="@+id/txtTemp2"
+        android:textSize="40dp"
+        android:gravity="center"
+        android:layout_above="@+id/txtTemp"
+        android:layout_toRightOf="@+id/txtHum"
+        android:layout_alignRight="@+id/txtTemp"
+        android:layout_alignEnd="@+id/txtTemp" />
+</RelativeLayout>

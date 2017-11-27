@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="app.smarthome.smarthome.ActuatorModule">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:id="@+id/imageView21"
+        android:src="@drawable/homebase"
+        android:layout_below="@+id/textView24"
+        android:layout_alignLeft="@+id/textView24"
+        android:layout_alignStart="@+id/textView24"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="-30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="House Base Diagram"
+        android:id="@+id/textView24"
+        android:textSize="35dp"
+        android:width="500sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="#ebebe0"
+        android:height="90dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="10dp"
+        android:layout_height="20dp"
+        android:text=" "
+        android:id="@+id/btnDoorActuator"
+        android:layout_marginBottom="171dp"
+        android:background="#00000000"
+        android:width="20dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/btnStoveActuator"
+        android:layout_toEndOf="@+id/btnStoveActuator" />
+
+    <Button
+        android:layout_width="5dp"
+        android:layout_height="18dp"
+        android:text=" "
+        android:id="@+id/btnSmokeAlarmActuator"
+        android:background="#00000000"
+        android:width="20dp"
+        android:layout_marginLeft="137dp"
+        android:layout_alignTop="@+id/btnDoorActuator"
+        android:layout_toRightOf="@+id/btnDoorActuator"
+        android:layout_toEndOf="@+id/btnDoorActuator"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="2dp" />
+
+    <Button
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:text=" "
+        android:id="@+id/btnAlarmClockActuator"
+        android:background="#00000000"
+        android:width="20dp"
+        android:layout_marginBottom="57dp"
+        android:layout_above="@+id/btnSmokeAlarmActuator"
+        android:layout_toRightOf="@+id/btnSmokeAlarmActuator"
+        android:layout_toEndOf="@+id/btnSmokeAlarmActuator"
+        android:layout_marginLeft="3dp" />
+
+    <Button
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:text=" "
+        android:id="@+id/btnHomeTheaterActuator"
+        android:background="#00000000"
+        android:width="20dp"
+        android:layout_marginBottom="65dp"
+        android:layout_alignBottom="@+id/imageView21"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:text=" "
+        android:id="@+id/btnStoveActuator"
+        android:background="#00000000"
+        android:width="20dp"
+        android:layout_above="@+id/btnAlarmClockActuator"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="15dp" />
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:text=" "
+        android:id="@+id/btnKitchenLightActuator"
+        android:background="#00000000"
+        android:width="20dp"
+        android:layout_alignBottom="@+id/btnAlarmClockActuator"
+        android:layout_alignLeft="@+id/btnDoorActuator"
+        android:layout_alignStart="@+id/btnDoorActuator" />
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:text=" "
+        android:id="@+id/btnLivingLightActuator"
+        android:background="#00000000"
+        android:width="20dp"
+        android:layout_above="@+id/btnHomeTheaterActuator"
+        android:layout_toRightOf="@+id/btnKitchenLightActuator"
+        android:layout_toEndOf="@+id/btnKitchenLightActuator" />
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:text=" "
+        android:id="@+id/btnMasterLightActuator"
+        android:background="#00000000"
+        android:width="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_above="@+id/btnHomeTheaterActuator"
+        android:layout_toRightOf="@+id/btnAlarmClockActuator"
+        android:layout_toEndOf="@+id/btnAlarmClockActuator"
+        android:layout_marginBottom="19dp" />
+
+    <Button
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:text=" "
+        android:id="@+id/btnDishWasherActuator"
+        android:background="#00000000"
+        android:width="20dp"
+        android:layout_marginLeft="13dp"
+        android:layout_above="@+id/btnKitchenLightActuator"
+        android:layout_toRightOf="@+id/btnKitchenLightActuator"
+        android:layout_toEndOf="@+id/btnKitchenLightActuator"
+        android:layout_marginStart="13dp" />
+
+    <Button
+        android:layout_width="55dp"
+        android:layout_height="18dp"
+        android:text=" "
+        android:id="@+id/btnClothHorseActuator"
+        android:background="#00000000"
+        android:width="20dp"
+        android:layout_below="@+id/textView24"
+        android:layout_alignRight="@+id/btnSmokeAlarmActuator"
+        android:layout_alignEnd="@+id/btnSmokeAlarmActuator"
+        android:layout_marginTop="36dp" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:text=" "
+        android:id="@+id/btnDiningLightActuator"
+        android:background="#00000000"
+        android:width="20dp"
+        android:layout_alignBaseline="@+id/btnAlarmClockActuator"
+        android:layout_alignBottom="@+id/btnAlarmClockActuator"
+        android:layout_toLeftOf="@+id/btnHomeTheaterActuator"
+        android:layout_toStartOf="@+id/btnHomeTheaterActuator" />
+
+</RelativeLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.smarthome.smarthome" >
+
+    <application
+        android:name=".GlobalValue"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivityMok"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="app.smarthome.smarthome.MainActivityMok" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".doorSensor"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="app.smarthome.smarthome.doorSensor" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".smokeDetector"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="app.smarthome.smarthome.smokeDetector" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".gasSensor"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="app.smarthome.smarthome.gasSensor" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".temperatureSensor"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="app.smarthome.smarthome.temperatureSensor" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".humiditySensor"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="app.smarthome.smarthome.humiditySensor" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DoorModule"
+            android:label="@string/title_activity_door_module" >
+        </activity>
+        <activity
+            android:name=".FireAlarmModule"
+            android:label="@string/title_activity_fire_alarm_module" >
+        </activity>
+        <activity
+            android:name=".AlarmClockModule"
+            android:label="@string/title_activity_alarm_clock_module" >
+        </activity>
+        <activity
+            android:name=".HomeTheaterModule"
+            android:label="@string/title_activity_home_threater_module" >
+        </activity>
+        <activity
+            android:name=".StoveModule"
+            android:label="@string/title_activity_stove_module" >
+        </activity>
+        <activity
+            android:name=".LightingModule"
+            android:label="@string/title_activity_lighting_module" >
+        </activity>
+        <activity
+            android:name=".ClothHorseModule"
+            android:label="@string/title_activity_cloth_horse" >
+        </activity>
+        <activity
+            android:name=".DishWasherModule"
+            android:label="@string/title_activity_dish_washer" >
+        </activity>
+        <activity
+            android:name=".MainControl"
+            android:label="@string/title_activity_main_control" >
+        </activity>
+        <activity
+            android:name=".DoorModule2"
+            android:label="@string/title_activity_door_module2" >
+        </activity>
+        <activity
+            android:name=".FireAlarmModule2"
+            android:label="@string/title_activity_fire_alarm_module2" >
+        </activity>
+        <activity
+            android:name=".ActuatorModule"
+            android:label="@string/title_activity_actuator_module" >
+        </activity>
+        <activity
+            android:name=".Adoor"
+            android:label="@string/title_activity_adoor" >
+        </activity>
+        <activity
+            android:name=".Asmoke"
+            android:label="@string/title_activity_asmoke" >
+        </activity>
+        <activity
+            android:name=".Aalarm"
+            android:label="@string/title_activity_aalarm" >
+        </activity>
+        <activity
+            android:name=".Ahometheater"
+            android:label="@string/title_activity_ahometheater" >
+        </activity>
+        <activity
+            android:name=".Astove"
+            android:label="@string/title_activity_astove" >
+        </activity>
+        <activity
+            android:name=".ALLight"
+            android:label="@string/title_activity_allight" >
+        </activity>
+        <activity
+            android:name=".ADLight"
+            android:label="@string/title_activity_adlight" >
+        </activity>
+        <activity
+            android:name=".AMLight"
+            android:label="@string/title_activity_amlight" >
+        </activity>
+        <activity
+            android:name=".AKLight"
+            android:label="@string/title_activity_aklight" >
+        </activity>
+        <activity
+            android:name=".ACloth"
+            android:label="@string/title_activity_acloth" >
+        </activity>
+        <activity
+            android:name=".ADish"
+            android:label="@string/title_activity_adish" >
+        </activity>
+    </application>
+
+</manifest>

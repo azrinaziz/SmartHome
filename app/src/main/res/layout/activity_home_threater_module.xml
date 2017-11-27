@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context="app.smarthome.smarthome.HomeThreaterModule">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="255sp"
+        android:id="@+id/imageView6"
+        android:src="@drawable/hometheater"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Movie is prepared."
+        android:id="@+id/textView4"
+        android:textSize="25sp"
+        android:layout_below="@+id/imageView6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Home Theater"
+        android:id="@+id/textView13"
+        android:textSize="22dp"
+        android:width="500sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="#ebebe0"
+        android:height="40dp"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/imageView7"
+        android:src="@drawable/borderline2"
+        android:layout_below="@+id/textView13"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Auto Play"
+        android:id="@+id/textView14"
+        android:textSize="13dp"
+        android:gravity="center"
+        android:layout_alignTop="@+id/imageView7"
+        android:layout_alignLeft="@+id/textView13"
+        android:layout_alignStart="@+id/textView13"
+        android:layout_toStartOf="@+id/imageView7"
+        android:layout_toLeftOf="@+id/imageView7" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Sleep Mode"
+        android:id="@+id/textView15"
+        android:textSize="13dp"
+        android:gravity="center"
+        android:layout_alignBottom="@+id/textView14"
+        android:layout_toRightOf="@+id/textView14"
+        android:layout_alignRight="@+id/textView13"
+        android:layout_alignEnd="@+id/textView13" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="3"
+        android:id="@+id/txtAutoPlayMovie"
+        android:gravity="center"
+        android:text="8:00PM"
+        android:paddingLeft="0dp"
+        android:textSize="40dp"
+        android:layout_below="@+id/textView14"
+        android:layout_toLeftOf="@+id/imageView7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="3"
+        android:id="@+id/txtSleepMode"
+        android:gravity="center"
+        android:text="12:00PM"
+        android:paddingLeft="0dp"
+        android:textSize="40dp"
+        android:layout_below="@+id/textView14"
+        android:layout_alignLeft="@+id/imageView7"
+        android:layout_alignStart="@+id/imageView7"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set"
+        android:id="@+id/btnHomeTheaterSet"
+        android:layout_below="@+id/txtAutoPlayMovie"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

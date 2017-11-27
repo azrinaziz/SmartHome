@@ -1,0 +1,149 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context="app.smarthome.smarthome.FireAlarmModule">
+
+    TextView android:text="Fire Alarm" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TxtFireAlarm"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="218sp"
+        android:id="@+id/imageView3"
+        android:src="@drawable/firealarmroom"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Air condition is good."
+        android:id="@+id/txtFireAlarmTitle"
+        android:textSize="25sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Fire Alarm Status"
+        android:id="@+id/textView10"
+        android:textSize="22dp"
+        android:width="500sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="#ebebe0"
+        android:height="40dp"
+        android:layout_below="@+id/textClock3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/imageView4"
+        android:src="@drawable/borderline2"
+        android:layout_below="@+id/textView10"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Smoke Level"
+        android:id="@+id/textView9"
+        android:textSize="13dp"
+        android:gravity="center"
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/imageView4"
+        android:layout_toStartOf="@+id/imageView4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Condition"
+        android:id="@+id/textView11"
+        android:textSize="13dp"
+        android:gravity="center"
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_toRightOf="@+id/textView9"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/imgSmokeLevel"
+        android:src="@drawable/firealarm2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/txtSmokeLevel"
+        android:layout_toLeftOf="@+id/imageView4"
+        android:layout_toStartOf="@+id/imageView4" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/imgSmokeCondition"
+        android:src="@drawable/air"
+        android:layout_alignTop="@+id/imgSmokeLevel"
+        android:layout_toEndOf="@+id/imgSmokeLevel"
+        android:layout_toRightOf="@+id/imgSmokeLevel"
+        android:layout_above="@+id/txtSmokeLevel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Low"
+        android:id="@+id/txtSmokeLevel"
+        android:gravity="center"
+        android:layout_alignBottom="@+id/imageView4"
+        android:layout_toLeftOf="@+id/imageView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Clear"
+        android:id="@+id/txtSmokeCondition"
+        android:gravity="center"
+        android:layout_alignTop="@+id/txtSmokeLevel"
+        android:layout_toRightOf="@+id/txtSmokeLevel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call Police"
+        android:id="@+id/button6"
+        android:layout_below="@+id/imageView4"
+        android:layout_centerHorizontal="true" />
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textClock3"
+        android:paddingTop="7dp"
+        android:paddingBottom="20dp"
+        android:layout_below="@+id/txtFireAlarmTitle"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

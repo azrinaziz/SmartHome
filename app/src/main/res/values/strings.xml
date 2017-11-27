@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">"Smart Home "</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main_module">MainModule</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+    <string name="title_activity_door_module">DoorModule</string>
+    <string name="title_activity_fire_alarm_module">FireAlarmModule</string>
+    <string name="title_activity_alarm_clock_module">AlarmClockModule</string>
+    <string name="title_activity_home_threater_module">HomeThreaterModule</string>
+    <string name="title_activity_stove_module">StoveModule</string>
+    <string name="title_activity_lighting_module">LightingModule</string>
+    <string name="title_activity_cloth_horse">ClothHorse</string>
+    <string name="title_activity_dish_washer">DishWasher</string>
+    <string name="title_activity_main_control">MainControl</string>
+    <string name="title_activity_door_module2">DoorModule2</string>
+    <string name="title_activity_fire_alarm_module2">FireAlarmModule2</string>
+    <string name="title_activity_actuator_module">ActuatorModule</string>
+    <string name="title_activity_adoor">Adoor</string>
+    <string name="title_activity_asmoke">Asmoke</string>
+    <string name="title_activity_aalarm">Aalarm</string>
+    <string name="title_activity_ahometheater">Ahometheater</string>
+    <string name="title_activity_astove">Astov</string>
+    <string name="title_activity_allight">ALLight</string>
+    <string name="title_activity_adlight">ADLight</string>
+    <string name="title_activity_amlight">AMLight</string>
+    <string name="title_activity_aklight">AKLight</string>
+    <string name="title_activity_acloth">ACloth</string>
+    <string name="title_activity_adish">ADish</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#4f41ff</color>
+    <color name="buttonBackground">#d2f7ff</color>
+    <color name="sensorHeader">#d9000000</color>
+    <color name="headerText">#ffffff</color>
+
+</resources>
