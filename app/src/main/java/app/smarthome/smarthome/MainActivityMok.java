@@ -2,19 +2,18 @@ package app.smarthome.smarthome;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivityMok extends Activity implements View.OnClickListener {
-    Button doorSensor, smokeDetector, gasSensor, temperatureSensor, humiditySensor;
-    ImageButton home;
-    int press = 0;
-    String doorBool, tempBool, smokeBool, gasBool, humBool;
+    private int press = 0;
+    private String doorBool;
+    private String tempBool;
+    private String smokeBool;
+    private String gasBool;
+    private String humBool;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +27,12 @@ public class MainActivityMok extends Activity implements View.OnClickListener {
         gasBool = basket.getString("smokeKey");
         humBool = basket.getString("humKey");
 
-        home = findViewById(R.id.imageButton);
-        doorSensor = findViewById(R.id.button1);
-        smokeDetector = findViewById(R.id.button2);
-        gasSensor = findViewById(R.id.button3);
-        temperatureSensor = findViewById(R.id.button4);
-        humiditySensor = findViewById(R.id.button5);
+        ImageButton home = findViewById(R.id.imageButton);
+        Button doorSensor = findViewById(R.id.button1);
+        Button smokeDetector = findViewById(R.id.button2);
+        Button gasSensor = findViewById(R.id.button3);
+        Button temperatureSensor = findViewById(R.id.button4);
+        Button humiditySensor = findViewById(R.id.button5);
 
         home.setOnClickListener(this);
         doorSensor.setOnClickListener(this);

@@ -9,15 +9,13 @@ import android.widget.EditText;
 
 public class temperatureSensor extends Activity implements View.OnClickListener{
 
-    Button submit;
-    EditText temp;
-    String temperature;
+    private EditText temp;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.temperaturesensor);
 
-        submit = findViewById(R.id.button);
+        Button submit = findViewById(R.id.button);
         temp = findViewById(R.id.fillin);
 
         //get globalValue to restore previous result
@@ -29,11 +27,11 @@ public class temperatureSensor extends Activity implements View.OnClickListener{
 
     public void onClick(View view) {
 
-        temperature = temp.getText().toString();
+        String temperature = temp.getText().toString();
 
         Intent i = new Intent();
         Bundle basket = new Bundle();
-        basket.putString("tempKey",temperature);
+        basket.putString("tempKey", temperature);
         i.putExtras(basket);
         setResult(RESULT_OK, i);
 

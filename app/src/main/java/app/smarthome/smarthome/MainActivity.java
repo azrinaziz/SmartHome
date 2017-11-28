@@ -1,7 +1,6 @@
 package app.smarthome.smarthome;
 
 import android.content.Intent;
-import android.provider.AlarmClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,12 +10,16 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btn_SensorModule, btn_ControlModule, btn_ActuatorModule;
+    private Button btn_ControlModule;
     //private Button btn_ControlModule;
    // private Button btn_ActuatorModule;
 
-    String doorBool,tempBool,smokeBool,gasBool,humBool;
-    int press = 0;
+    private String doorBool;
+    private String tempBool;
+    private String smokeBool;
+    private String gasBool;
+    private String humBool;
+    private int press = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +27,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         //Create button
-        btn_SensorModule = findViewById(R.id.btnSensor);
+        Button btn_SensorModule = findViewById(R.id.btnSensor);
         btn_ControlModule = findViewById(R.id.btnControl);
-        btn_ActuatorModule = findViewById(R.id.btnActuator);
+        Button btn_ActuatorModule = findViewById(R.id.btnActuator);
 
         //Set Button Listener
         btn_SensorModule.setOnClickListener(this);
@@ -50,11 +53,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
 
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

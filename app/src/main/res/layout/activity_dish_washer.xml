@@ -4,7 +4,7 @@
     android:paddingRight="0dp"
     android:paddingTop="0dp"
     android:paddingBottom="0dp"
-    tools:context="app.smarthome.smarthome.DishWasher"
+    tools:context="app.smarthome.smarthome.DishWasherModule"
     android:id="@+id/TxtDishWasher">
 
     <ImageView

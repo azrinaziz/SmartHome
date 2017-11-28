@@ -7,16 +7,15 @@ import android.view.View;
 import android.widget.Button;
 
 public class smokeDetector extends Activity implements View.OnClickListener{
-    Button presence, absence;
-    String smokeBool;
+    private String smokeBool;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.smokedetector);
 
-        presence = findViewById(R.id.button1);
-        absence = findViewById(R.id.button2);
+        Button presence = findViewById(R.id.button1);
+        Button absence = findViewById(R.id.button2);
 
         presence.setOnClickListener(this);
         absence.setOnClickListener(this);

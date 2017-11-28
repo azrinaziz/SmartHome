@@ -13,10 +13,11 @@ import android.widget.Switch;
 
 public class LightingModule extends AppCompatActivity implements View.OnClickListener{
 
-    Switch livingRoom, diningRoom, masterRoom, kitchen;
-    String LLBool, DLBool, MLBool, KLBool;
-    Button btnSetLight;
-    final Context context = this;
+    private Switch livingRoom;
+    private Switch diningRoom;
+    private Switch masterRoom;
+    private Switch kitchen;
+    private final Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +30,10 @@ public class LightingModule extends AppCompatActivity implements View.OnClickLis
         kitchen = findViewById(R.id.switchK);
 
         final GlobalValue globalValue = (GlobalValue) getApplicationContext();
-        LLBool = globalValue.getLivingRoomBool();
-        DLBool = globalValue.getDiningRoomBool();
-        MLBool = globalValue.getMasterRoomBool();
-        KLBool = globalValue.getKitchenBool();
+        String LLBool = globalValue.getLivingRoomBool();
+        String DLBool = globalValue.getDiningRoomBool();
+        String MLBool = globalValue.getMasterRoomBool();
+        String KLBool = globalValue.getKitchenBool();
 
         if (LLBool.equals("1")){
             livingRoom.setChecked(true);
@@ -54,7 +55,7 @@ public class LightingModule extends AppCompatActivity implements View.OnClickLis
         }
 
 
-        btnSetLight = findViewById(R.id.btnSetLighting);
+        Button btnSetLight = findViewById(R.id.btnSetLighting);
         btnSetLight.setOnClickListener(this);
     }
 

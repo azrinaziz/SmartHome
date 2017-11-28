@@ -13,30 +13,26 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class FireAlarmModule2 extends AppCompatActivity implements View.OnClickListener {
-    TextView smokeLevel, smokeCondition, smokeTitle;
-    String flagLevel;
-    ImageView imgSmokeLevel, imgSmokeCondition;
-    Button btnCallPolice;
-    final Context context = this;
+    private final Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fire_alarm_module2);
 
-        smokeLevel = findViewById(R.id.txtSmokeLevel2);
-        smokeCondition = findViewById(R.id.txtSmokeCondition2);
-        smokeTitle = findViewById(R.id.txtSmokeTitle2);
-        imgSmokeLevel = findViewById(R.id.imgSmokeLevel2);
-        imgSmokeCondition = findViewById(R.id.imgSmokeCondition2);
-        btnCallPolice = findViewById(R.id.btnCallPoliceForSmoke);
+        TextView smokeLevel = findViewById(R.id.txtSmokeLevel2);
+        TextView smokeCondition = findViewById(R.id.txtSmokeCondition2);
+        TextView smokeTitle = findViewById(R.id.txtSmokeTitle2);
+        ImageView imgSmokeLevel = findViewById(R.id.imgSmokeLevel2);
+        ImageView imgSmokeCondition = findViewById(R.id.imgSmokeCondition2);
+        Button btnCallPolice = findViewById(R.id.btnCallPoliceForSmoke);
 
         //set call police button
         btnCallPolice.setOnClickListener(this);
 
         //get globalValue to check status
         final GlobalValue globalValue = (GlobalValue) getApplicationContext();
-        flagLevel = globalValue.getSmokeBool();
+        String flagLevel = globalValue.getSmokeBool();
 
         if (flagLevel.equals("0")) {
             imgSmokeLevel.setImageResource(R.drawable.firealarm2);
@@ -67,11 +63,8 @@ public class FireAlarmModule2 extends AppCompatActivity implements View.OnClickL
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
 
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

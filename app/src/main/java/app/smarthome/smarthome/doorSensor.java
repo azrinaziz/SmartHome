@@ -7,16 +7,15 @@ import android.view.View;
 import android.widget.Button;
 
 public class doorSensor extends Activity implements View.OnClickListener{
-    Button authorized, unauthorized;
-    String doorbool;
+    private String doorbool;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.doorsensor);
 
-        authorized = findViewById(R.id.button1);
-        unauthorized = findViewById(R.id.button2);
+        Button authorized = findViewById(R.id.button1);
+        Button unauthorized = findViewById(R.id.button2);
 
         authorized.setOnClickListener(this);
         unauthorized.setOnClickListener(this);

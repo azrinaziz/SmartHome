@@ -9,24 +9,23 @@ import android.view.View;
 import android.widget.Button;
 
 public class ActuatorModule extends AppCompatActivity implements View.OnClickListener{
-    Button btnDoorAct, btnFireAct, btmAlarmAct, btnTheaterAct, btnStoveAct, btnLLightAct, btnDLightAct, btnKLightAct,btnMLightAct, btnClothAct,btnDishwasherAct;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actuator_module);
 
-        btnDoorAct = findViewById(R.id.btnDoorActuator);
-        btnFireAct = findViewById(R.id.btnSmokeAlarmActuator);
-        btmAlarmAct = findViewById(R.id.btnAlarmClockActuator);
-        btnTheaterAct = findViewById(R.id.btnHomeTheaterActuator);
-        btnStoveAct = findViewById(R.id.btnStoveActuator);
-        btnLLightAct = findViewById(R.id.btnLivingLightActuator);
-        btnDLightAct = findViewById(R.id.btnDiningLightActuator);
-        btnKLightAct = findViewById(R.id.btnKitchenLightActuator);
-        btnMLightAct = findViewById(R.id.btnMasterLightActuator);
-        btnClothAct = findViewById(R.id.btnClothHorseActuator);
-        btnDishwasherAct = findViewById(R.id.btnDishWasherActuator);
+        Button btnDoorAct = findViewById(R.id.btnDoorActuator);
+        Button btnFireAct = findViewById(R.id.btnSmokeAlarmActuator);
+        Button btmAlarmAct = findViewById(R.id.btnAlarmClockActuator);
+        Button btnTheaterAct = findViewById(R.id.btnHomeTheaterActuator);
+        Button btnStoveAct = findViewById(R.id.btnStoveActuator);
+        Button btnLLightAct = findViewById(R.id.btnLivingLightActuator);
+        Button btnDLightAct = findViewById(R.id.btnDiningLightActuator);
+        Button btnKLightAct = findViewById(R.id.btnKitchenLightActuator);
+        Button btnMLightAct = findViewById(R.id.btnMasterLightActuator);
+        Button btnClothAct = findViewById(R.id.btnClothHorseActuator);
+        Button btnDishwasherAct = findViewById(R.id.btnDishWasherActuator);
 
         btnDoorAct.setOnClickListener(this);
         btnFireAct.setOnClickListener(this);
@@ -55,11 +54,8 @@ public class ActuatorModule extends AppCompatActivity implements View.OnClickLis
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
 
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

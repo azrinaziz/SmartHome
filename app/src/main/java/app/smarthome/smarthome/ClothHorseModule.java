@@ -13,23 +13,19 @@ import android.widget.TextView;
 
 public class ClothHorseModule extends AppCompatActivity implements View.OnClickListener {
 
-    String humidity, temperature;
-    int humidity2, temperature2;
-    TextView txtHum,txtHum2,txtTemp,txtTemp2, txtTitle;
-    Button btnTurnOnClothHorse;
-    final Context context = this;
+    private final Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cloth_horse);
 
-        txtHum = findViewById(R.id.txtHumLevel); //Humidity value
-        txtHum2 = findViewById(R.id.txtHum); //Humidity description
-        txtTemp = findViewById(R.id.txtTemp2); //Temperature value
-        txtTemp2 = findViewById(R.id.txtTemp); //Temperature description
-        txtTitle = findViewById(R.id.txtClothHorseTitle); //Big title
-        btnTurnOnClothHorse = findViewById(R.id.btnClothHorse); //Switch button
+        TextView txtHum = findViewById(R.id.txtHumLevel);
+        TextView txtHum2 = findViewById(R.id.txtHum);
+        TextView txtTemp = findViewById(R.id.txtTemp2);
+        TextView txtTemp2 = findViewById(R.id.txtTemp);
+        TextView txtTitle = findViewById(R.id.txtClothHorseTitle);
+        Button btnTurnOnClothHorse = findViewById(R.id.btnClothHorse);
 
         final GlobalValue globalValue = (GlobalValue) getApplicationContext();
         String gga22 = globalValue.getClothHorseBool();
@@ -42,11 +38,11 @@ public class ClothHorseModule extends AppCompatActivity implements View.OnClickL
 
         btnTurnOnClothHorse.setOnClickListener(this);
 
-        humidity = globalValue.getHumBool();
-        temperature = globalValue.getTempBool();
+        String humidity = globalValue.getHumBool();
+        String temperature = globalValue.getTempBool();
 
-        humidity2 = Integer.parseInt(humidity);
-        temperature2 = Integer.parseInt(temperature);
+        int humidity2 = Integer.parseInt(humidity);
+        int temperature2 = Integer.parseInt(temperature);
 
         txtHum.setText(humidity);
         txtTemp.setText(temperature);
@@ -92,11 +88,8 @@ public class ClothHorseModule extends AppCompatActivity implements View.OnClickL
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
 
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

@@ -9,28 +9,24 @@ import android.widget.TextView;
 
 public class Adoor extends AppCompatActivity {
 
-    TextView DoorStatus;
-    ImageView Door;
-    String DoorBool;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adoor);
 
-        DoorStatus = findViewById(R.id.txtADoor);
-        Door = findViewById(R.id.imgADoor);
+        TextView doorStatus = findViewById(R.id.txtADoor);
+        ImageView door = findViewById(R.id.imgADoor);
 
         final GlobalValue globalValue = (GlobalValue) getApplicationContext();
-        DoorBool = globalValue.getDoorBool();
+        String doorBool = globalValue.getDoorBool();
 
-        if (DoorBool.equals("0")) //closed
+        if (doorBool.equals("0")) //closed
         {
-            Door.setImageResource(R.drawable.dooropen1);
-            DoorStatus.setText("Door : Closed");
-        }else if (DoorBool.equals("1")){
-            Door.setImageResource(R.drawable.doorclose1);
-            DoorStatus.setText("Door : Opened");
+            door.setImageResource(R.drawable.dooropen1);
+            doorStatus.setText("Door : Closed");
+        }else if (doorBool.equals("1")){
+            door.setImageResource(R.drawable.doorclose1);
+            doorStatus.setText("Door : Opened");
         }
 
     }
@@ -49,10 +45,7 @@ public class Adoor extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
 
-        return super.onOptionsItemSelected(item);
     }
 }

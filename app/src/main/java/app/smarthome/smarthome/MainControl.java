@@ -10,29 +10,20 @@ import android.widget.Button;
 
 public class MainControl extends AppCompatActivity implements View.OnClickListener{
 
-    private Button btn_DoorModule;
-    private Button btn_FireAlarmModule;
-    private Button btn_AlarmClockModule;
-    private Button btn_HomeTheaterModule;
-    private Button btn_StoveModule;
-    private Button btn_LightingModule;
-    private Button btn_ClothHorseModule;
-    private Button btn_DishWasherModule;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_control);
 
         //Create button
-        btn_DoorModule = findViewById(R.id.btnDoor);
-        btn_FireAlarmModule = findViewById(R.id.btnFireAlarm);
-        btn_AlarmClockModule = findViewById(R.id.btnAlarm);
-        btn_HomeTheaterModule = findViewById(R.id.btnHomeTheater);
-        btn_StoveModule = findViewById(R.id.btnStove);
-        btn_LightingModule = findViewById(R.id.btnLighting);
-        btn_ClothHorseModule = findViewById(R.id.btnClothHorse);
-        btn_DishWasherModule = findViewById(R.id.btnDishWasher);
+        Button btn_DoorModule = findViewById(R.id.btnDoor);
+        Button btn_FireAlarmModule = findViewById(R.id.btnFireAlarm);
+        Button btn_AlarmClockModule = findViewById(R.id.btnAlarm);
+        Button btn_HomeTheaterModule = findViewById(R.id.btnHomeTheater);
+        Button btn_StoveModule = findViewById(R.id.btnStove);
+        Button btn_LightingModule = findViewById(R.id.btnLighting);
+        Button btn_ClothHorseModule = findViewById(R.id.btnClothHorse);
+        Button btn_DishWasherModule = findViewById(R.id.btnDishWasher);
 
         //Set Button Listener
         btn_DoorModule.setOnClickListener(this);
@@ -89,10 +80,7 @@ public class MainControl extends AppCompatActivity implements View.OnClickListen
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
 
-        return super.onOptionsItemSelected(item);
     }
 }

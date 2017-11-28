@@ -13,16 +13,15 @@ import android.widget.EditText;
 
 public class AlarmClockModule extends AppCompatActivity implements View.OnClickListener{
 
-    final Context context = this;
-    Button btnSetAlarm;
-    EditText alarm;
+    private final Context context = this;
+    private EditText alarm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm_clock_module);
 
-        btnSetAlarm = findViewById(R.id.btnSetAlarm);
+        Button btnSetAlarm = findViewById(R.id.btnSetAlarm);
         btnSetAlarm.setOnClickListener(this);
 
         final GlobalValue globalValue = (GlobalValue) getApplicationContext();
@@ -45,11 +44,8 @@ public class AlarmClockModule extends AppCompatActivity implements View.OnClickL
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
 
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

@@ -9,21 +9,17 @@ import android.widget.TextView;
 
 public class Aalarm extends AppCompatActivity {
 
-    TextView Status;
-    ImageView Status2;
-    String Bool;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aalarm);
 
-        Status = findViewById(R.id.txtAalarm);
-        Status2 = findViewById(R.id.imgAclock);
+        TextView status = findViewById(R.id.txtAalarm);
+        ImageView status2 = findViewById(R.id.imgAclock);
 
         final GlobalValue globalValue = (GlobalValue) getApplicationContext();
-        Bool = globalValue.getAlarmValue();
-        Status.setText("Alarm set at: " + Bool);
+        String bool = globalValue.getAlarmValue();
+        status.setText("Alarm set at: " + bool);
     }
 
     @Override
@@ -40,10 +36,7 @@ public class Aalarm extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
 
-        return super.onOptionsItemSelected(item);
     }
 }

@@ -9,28 +9,24 @@ import android.widget.TextView;
 
 public class Asmoke extends AppCompatActivity {
 
-    TextView Status;
-    ImageView Status2;
-    String Bool;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_asmoke);
 
-        Status = findViewById(R.id.txtAsmoke);
-        Status2 = findViewById(R.id.imgAsmoke);
+        TextView status = findViewById(R.id.txtAsmoke);
+        ImageView status2 = findViewById(R.id.imgAsmoke);
 
         final GlobalValue globalValue = (GlobalValue) getApplicationContext();
-        Bool = globalValue.getSmokeBool();
+        String bool = globalValue.getSmokeBool();
 
-        if (Bool.equals("0")) //closed
+        if (bool.equals("0")) //closed
         {
-            Status2.setImageResource(R.drawable.firealarmoff);
-            Status.setText("Fire Alarm : Sleep");
-        }else if (Bool.equals("1")){
-            Status2.setImageResource(R.drawable.firealarmon);
-            Status.setText("Fire Alarm : Activated");
+            status2.setImageResource(R.drawable.firealarmoff);
+            status.setText("Fire Alarm : Sleep");
+        }else if (bool.equals("1")){
+            status2.setImageResource(R.drawable.firealarmon);
+            status.setText("Fire Alarm : Activated");
         }
     }
 
@@ -48,10 +44,7 @@ public class Asmoke extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
 
-        return super.onOptionsItemSelected(item);
     }
 }

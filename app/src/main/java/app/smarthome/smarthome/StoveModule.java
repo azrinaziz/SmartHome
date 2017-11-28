@@ -14,29 +14,25 @@ import android.widget.TextView;
 
 public class StoveModule extends AppCompatActivity implements View.OnClickListener{
 
-    TextView stoveStatus, stoveCondition, stoveTitle;
-    String flagStatus;
-    ImageView imgStoveStatus, imgStoveCondition;
-    Button btnTurnOff;
-    final Context context = this;
+    private final Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stove_module);
 
-        stoveStatus = findViewById(R.id.txtGasLeaking);
-        stoveCondition = findViewById(R.id.txtGasCondition);
-        stoveTitle = findViewById(R.id.txtGasTitle);
-        imgStoveStatus = findViewById(R.id.imgGasLeaking);
-        imgStoveCondition = findViewById(R.id.imgGasCondition);
-        btnTurnOff = findViewById(R.id.btnTurnOffForGas);
+        TextView stoveStatus = findViewById(R.id.txtGasLeaking);
+        TextView stoveCondition = findViewById(R.id.txtGasCondition);
+        TextView stoveTitle = findViewById(R.id.txtGasTitle);
+        ImageView imgStoveStatus = findViewById(R.id.imgGasLeaking);
+        ImageView imgStoveCondition = findViewById(R.id.imgGasCondition);
+        Button btnTurnOff = findViewById(R.id.btnTurnOffForGas);
 
         btnTurnOff.setOnClickListener(this);
 
         //get globalValue to check status
         final GlobalValue globalValue = (GlobalValue) getApplicationContext();
-        flagStatus = globalValue.getGasBool();
+        String flagStatus = globalValue.getGasBool();
 
         if (flagStatus.equals("0")) {
             imgStoveStatus.setImageResource(R.drawable.safe2);
@@ -67,11 +63,8 @@ public class StoveModule extends AppCompatActivity implements View.OnClickListen
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
 
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

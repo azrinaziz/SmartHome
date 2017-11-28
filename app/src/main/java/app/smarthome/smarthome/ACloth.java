@@ -9,26 +9,22 @@ import android.widget.TextView;
 
 public class ACloth extends AppCompatActivity {
 
-    TextView Status;
-    ImageView Status2;
-    String Bool;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acloth);
 
-        Status = findViewById(R.id.txtAcloth);
-        Status2 = findViewById(R.id.imgACloth);
+        TextView status = findViewById(R.id.txtAcloth);
+        ImageView status2 = findViewById(R.id.imgACloth);
 
         final GlobalValue globalValue = (GlobalValue) getApplicationContext();
-        Bool = globalValue.getClothHorseBool();
+        String bool = globalValue.getClothHorseBool();
 
-        if (Bool.equals("0")) //closed
+        if (bool.equals("0")) //closed
         {
-            Status.setText("Cloth Horse : Protection Mode Off");
-        }else if (Bool.equals("1")){
-            Status.setText("Cloth Horse : Protection Mode On");
+            status.setText("Cloth Horse : Protection Mode Off");
+        }else if (bool.equals("1")){
+            status.setText("Cloth Horse : Protection Mode On");
         }
 
     }
@@ -47,10 +43,7 @@ public class ACloth extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
 
-        return super.onOptionsItemSelected(item);
     }
 }

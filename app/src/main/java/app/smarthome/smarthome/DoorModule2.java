@@ -12,35 +12,28 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import static android.app.PendingIntent.getActivities;
-import static android.app.PendingIntent.getActivity;
-
 public class DoorModule2 extends AppCompatActivity implements View.OnClickListener{
-    TextView doorStatus, doorPermission, doorTitle;
-    String flagStatus, flagPermission;
-    ImageView imgDoor, imgPermission;
-    Button btnCallPolice;
-    final Context context = this;
+    private final Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_door_module2);
 
-        doorStatus = findViewById(R.id.txtDoorStatus2);
-        doorPermission = findViewById(R.id.txtDoorPermision2);
-        doorTitle = findViewById(R.id.txtDoorTitle2);
-        imgDoor = findViewById(R.id.imgDoorCondition2);
-        imgPermission = findViewById(R.id.imgDoorPermission2);
-        btnCallPolice = findViewById(R.id.btnCallPoliceAtDoor);
+        TextView doorStatus = findViewById(R.id.txtDoorStatus2);
+        TextView doorPermission = findViewById(R.id.txtDoorPermision2);
+        TextView doorTitle = findViewById(R.id.txtDoorTitle2);
+        ImageView imgDoor = findViewById(R.id.imgDoorCondition2);
+        ImageView imgPermission = findViewById(R.id.imgDoorPermission2);
+        Button btnCallPolice = findViewById(R.id.btnCallPoliceAtDoor);
 
         //set OnClickListener
         btnCallPolice.setOnClickListener(this);
 
         //get globalValue to check status
         final GlobalValue globalValue = (GlobalValue) getApplicationContext();
-        flagStatus = globalValue.getDoorOpenBool();
-        flagPermission = globalValue.getDoorBool();
+        String flagStatus = globalValue.getDoorOpenBool();
+        String flagPermission = globalValue.getDoorBool();
 
         if (flagStatus.equals("0")) {
             imgDoor.setImageResource(R.drawable.lockeddoor2);

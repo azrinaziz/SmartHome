@@ -9,28 +9,24 @@ import android.widget.TextView;
 
 public class Astove extends AppCompatActivity {
 
-    TextView Status;
-    ImageView Status2;
-    String Bool;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_astov);
 
-        Status = findViewById(R.id.txtAstove);
-        Status2 = findViewById(R.id.imgAstove);
+        TextView status = findViewById(R.id.txtAstove);
+        ImageView status2 = findViewById(R.id.imgAstove);
 
         final GlobalValue globalValue = (GlobalValue) getApplicationContext();
-        Bool = globalValue.getGasBool();
+        String bool = globalValue.getGasBool();
 
-        if (Bool.equals("0")) //closed
+        if (bool.equals("0")) //closed
         {
-            Status2.setImageResource(R.drawable.stoveoff);
-            Status.setText("Stove status: Closed");
-        }else if (Bool.equals("1")){
-            Status2.setImageResource(R.drawable.stoveon);
-            Status.setText("Stove status: On");
+            status2.setImageResource(R.drawable.stoveoff);
+            status.setText("Stove status: Closed");
+        }else if (bool.equals("1")){
+            status2.setImageResource(R.drawable.stoveon);
+            status.setText("Stove status: On");
         }
 
     }
@@ -49,10 +45,7 @@ public class Astove extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
 
-        return super.onOptionsItemSelected(item);
     }
 }

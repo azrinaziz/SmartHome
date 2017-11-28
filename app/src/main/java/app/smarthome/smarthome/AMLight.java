@@ -9,28 +9,24 @@ import android.widget.TextView;
 
 public class AMLight extends AppCompatActivity {
 
-    TextView Status;
-    ImageView Status2;
-    String Bool;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_amlight);
 
-        Status = findViewById(R.id.txtAMLight);
-        Status2 = findViewById(R.id.imgAMLight);
+        TextView status = findViewById(R.id.txtAMLight);
+        ImageView status2 = findViewById(R.id.imgAMLight);
 
         final GlobalValue globalValue = (GlobalValue) getApplicationContext();
-        Bool = globalValue.getMasterRoomBool();
+        String bool = globalValue.getMasterRoomBool();
 
-        if (Bool.equals("0")) //closed
+        if (bool.equals("0")) //closed
         {
-            Status2.setImageResource(R.drawable.lightoff1);
-            Status.setText("Light : Off");
-        }else if (Bool.equals("1")){
-            Status2.setImageResource(R.drawable.lighton1);
-            Status.setText("Light : On");
+            status2.setImageResource(R.drawable.lightoff1);
+            status.setText("Light : Off");
+        }else if (bool.equals("1")){
+            status2.setImageResource(R.drawable.lighton1);
+            status.setText("Light : On");
         }
     }
 
@@ -48,10 +44,7 @@ public class AMLight extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
 
-        return super.onOptionsItemSelected(item);
     }
 }

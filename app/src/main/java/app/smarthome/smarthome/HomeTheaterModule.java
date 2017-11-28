@@ -13,16 +13,16 @@ import android.widget.EditText;
 
 public class HomeTheaterModule extends AppCompatActivity implements View.OnClickListener {
 
-    final Context context = this;
-    EditText autoPlayTime, sleepTime;
-    Button btnSet;
+    private final Context context = this;
+    private EditText autoPlayTime;
+    private EditText sleepTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_threater_module);
 
-        btnSet= findViewById(R.id.btnHomeTheaterSet);
+        Button btnSet = findViewById(R.id.btnHomeTheaterSet);
         btnSet.setOnClickListener(this);
 
         final GlobalValue globalValue = (GlobalValue) getApplicationContext();
@@ -46,11 +46,8 @@ public class HomeTheaterModule extends AppCompatActivity implements View.OnClick
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
 
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

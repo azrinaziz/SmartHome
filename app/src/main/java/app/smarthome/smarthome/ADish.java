@@ -9,8 +9,6 @@ import android.widget.TextView;
 
 public class ADish extends AppCompatActivity {
 
-    TextView Status;
-    ImageView Status2;
     String Bool;
 
     @Override
@@ -18,8 +16,8 @@ public class ADish extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adish);
 
-        Status = findViewById(R.id.txtAsmoke);
-        Status2 = findViewById(R.id.imgAsmoke);
+        TextView status = findViewById(R.id.txtAsmoke);
+        ImageView status2 = findViewById(R.id.imgAsmoke);
     }
 
     @Override
@@ -36,10 +34,7 @@ public class ADish extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
 
-        return super.onOptionsItemSelected(item);
     }
 }
