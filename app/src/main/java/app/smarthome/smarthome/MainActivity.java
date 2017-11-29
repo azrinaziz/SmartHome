@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             gasBool = basket.getString("gasKey");
             smokeBool = basket.getString("smokeKey");
             humBool = basket.getString("humKey");
-            btn_ControlModule.setText(doorBool + "/" + tempBool + "/"+ gasBool + "/" + smokeBool + "/" + humBool);
+            //btn_ControlModule.setText(doorBool + "/" + tempBool + "/"+ gasBool + "/" + smokeBool + "/" + humBool);
         }
     }
 }
